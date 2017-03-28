@@ -1,0 +1,78 @@
+<form class="col-sm-6 col-sm-offset-3" name="contactForm">
+    <h1>Create your account</h1>
+    <br>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="firstName"
+               ng-model="firstName" ng-required="true" ng-minlength="2">
+        <div ng-show="contactForm.firstName.$touched && contactForm.firstName.$invalid">
+            <small style="color: red; display: block ">Enter a valid name</small>
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="lastName"
+               ng-model="lastName" ng-required="true" ng-minlength="2">
+        <div ng-show="contactForm.lastName.$touched && contactForm.lastName.$invalid">
+            <small style="color: red; display: block ">Enter a valid name</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email"  placeholder="Enter email" name="email"
+               ng-model="email" ng-required="true" ng-minlength="6">
+        <div ng-show="contactForm.email.$touched && contactForm.email.$invalid">
+            <small style="color: red; display: block ">Enter a valid email</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone"
+               ng-model="phone" ng-required="true" ng-minlength="6"
+               onkeypress='return event.charCode >= 48 && event.charCode <= 57' >
+        <div ng-show="contactForm.phone.$touched && contactForm.phone.$invalid">
+            <small style="color: red; display: block ">Enter a valid phone number</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">password</label>
+        <input type="text" class="form-control" id="password" placeholder="Enter password" name="password"
+               ng-model="password" ng-required="true" ng-minlength="4">
+        <div ng-show="contactForm.password.$touched && contactForm.password.$invalid">
+            <small style="color: red; display: block ">Enter a valid password</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="address">adress</label>
+        <input type="text" class="form-control" id="address" placeholder="Enter adress" name="adress"
+               ng-model="address" ng-required="true" ng-minlength="2">
+        <div ng-show="contactForm.adress.$touched && contactForm.adress.$invalid">
+            <small style="color: red; display: block ">Enter a valid password</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="postalCode">Postal Code</label>
+        <input type="text" class="form-control" id="postalCode" placeholder="Enter postal code" name="postalCode"
+               ng-model="postalCode" ng-required="true" ng-minlength="4"
+               onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        <div ng-show="contactForm.postalCode.$touched && contactForm.postalCode.$invalid">
+            <small style="color: red; display: block ">Enter a valid postal code</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" placeholder="Enter city name" name="city"
+               ng-model="city" ng-required="true" ng-minlength="2">
+        <div ng-show="contactForm.city.$touched && contactForm.city.$invalid">
+            <small style="color: red; display: block ">Enter a valid postal code</small>
+        </div>
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid" ng-click="signButton()" >Submit</button>
+    <br>
+
+    <div ng-show="showFeedback" class="alert ng-class:classColor;" role="alert">
+        <strong>{{feedback}}</strong>
+    </div>
+</form>

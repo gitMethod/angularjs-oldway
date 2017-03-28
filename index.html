@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>client development</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/product.categories.service.js"></script>
+    <script src="app/product.details.service.js"></script>
+    <script src="app/details.shopping.service.js"></script>
+
+    <script src="app/header/header.module.js"></script>
+    <script src="app/header/header.component.js"></script>
+
+    <script src="app/products/products.module.js"></script>
+    <script src="app/products/products.service.js"></script>
+    <script src="app/products/products.component.js"></script>
+
+    <script src="app/categories/categories.module.js"></script>
+    <script src="app/categories/categories.service.js"></script>
+    <script src="app/categories/categories.component.js"></script>
+
+    <script src="app/details/details.module.js"></script>
+    <script src="app/details/details.component.js"></script>
+
+    <script src="app/signup/signup.module.js"></script>
+    <script src="app/signup/signup.service.js"></script>
+    <script src="app/signup/signup.component.js"></script>
+
+    <script src="app/login/login.module.js"></script>
+    <script src="app/login/login.service.js"></script>
+    <script src="app/login/login.component.js"></script>
+
+
+    <script src="app/shopping/shopping.module.js"></script>
+    <script src="app/shopping/shopping.service.js"></script>
+    <script src="app/shopping/shopping.component.js"></script>
+
+</head>
+    <body ng-app="app">
+
+        <ui-view></ui-view>
+
+    </body>
+</html>

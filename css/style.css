@@ -1,0 +1,62 @@
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories label {
+    margin-left: 25px;
+}
+
+.categories div {
+   margin-bottom: 20px
+}
+
+span:hover, label:active {
+    background:darkgray;
+}
+
+span:active{
+    background:black;
+}
+
+
+input.ng-invalid.ng-touched, textarea.ng-invalid{
+    border: 2px solid red;
+}
+
+.log-user {
+    margin-right: 50px
+}
+
+.image img {
+    width:100%;
+    vertical-align:top;
+}
+.image:after {
+    content:'';
+    text-align: center;
+    color: #d9d9d9;
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.1);
+    background-image: url("/images/sold.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.image:hover:after {
+
+}
+
+
+

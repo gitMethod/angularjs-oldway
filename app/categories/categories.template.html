@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+
+        <ui-view class="col-sm-9"></ui-view>
+
+        <div class="panel panel-default col-sm-3" style="padding: 40px"><br>
+
+            <h4>Search Product</h4><br>
+            <div class="input-group row">
+                <span class="input-group-addon glyphicon glyphicon-search" role="button" ng-click="sendSearchText()" >
+                </span>
+                <input type="text" class="form-control" placeholder="product name" aria-describedby="Search" ng-model="foo">
+            </div><br>
+
+            <div class="row categories">
+                <fieldset>
+                    <div ng-repeat="category in allCategories" class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" id="checkbox"
+                                   ng-model="checkboxCat" ng-click="filterByCheck()">{{category.name}}
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+        </div>
+    </div>
+</div>
+

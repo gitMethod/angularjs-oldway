@@ -1,0 +1,14 @@
+<div class="row">
+        <div class="thumbnail col-sm-6 col-md-offset-3" ui-sref="header.categories.details">
+            <img src="{{product.imageUrl}}" alt="...">
+            <div class="caption">
+                <h3>{{product.name}}</h3>
+                <p>{{product.description}}</p>
+                <p>{{product.price | currency}}</p>
+                <p><a ng-click="sendProduct(product)" href="#" class="btn btn-danger" role="button">add to cart</a> </p>
+            </div>
+        </div>
+</div>
+<div ng-show="showFeedback" class=" col-sm-6 col-md-offset-3 alert alert-success" role="alert">
+    <strong>{{"Product added to cart"}}</strong>
+</div>

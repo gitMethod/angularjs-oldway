@@ -1,0 +1,13 @@
+angular.module("app",
+    [
+        "ngRoute",
+        "angular.filter",
+        "ui.router",
+        "products",
+        "categories",
+        "header",
+        "details",
+        "signup",
+        "login",
+        "shopping"
+    ]);
