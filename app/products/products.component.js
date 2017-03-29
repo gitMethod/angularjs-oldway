@@ -7,9 +7,9 @@ angular.module("products").component("productsComponent", {
 
             $scope.sendToState = function () {
                 if($rootScope.loggedIn){
-                    $state.go("header.categories.details");
+                    $state.go("header.details");
                 } else {
-                    $state.go("header.categories.login");
+                    $state.go("header.login");
                 }
             };
 

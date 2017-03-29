@@ -5,9 +5,9 @@ angular.module("header").component("headerComponent", {
 
             $scope.sendToShopping = function () {
                 if($rootScope.loggedIn){
-                    $state.go("header.categories.shopping");
+                    $state.go("header.shopping");
                 } else {
-                    $state.go("header.categories.login");
+                    $state.go("header.login");
                 }
             };
 

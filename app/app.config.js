@@ -15,23 +15,23 @@ angular.module("app")
                     url: '/products',
                     template: "<products-component></products-component>"
                 })
-                .state('header.categories.details',{
+                .state('header.details',{
                     url: '/details',
                     template: "<details-component></details-component>"
                 })
-                .state('header.categories.signup',{
+                .state('header.signup',{
                     url: '/signup',
                     template: "<signup-component></signup-component>"
                 })
-                .state('header.categories.login',{
+                .state('header.login',{
                     url: '/login',
                     template: "<login-component></login-component>"
                 })
-            .state('header.categories.shopping',{
+            .state('header.shopping',{
                 url: '/shopping',
                 template: "<shopping-component></shopping-component>"
             });
 
-            $urlRouterProvider.otherwise("/header/categories/login");
+            $urlRouterProvider.otherwise("/header/login");
 
         }]);

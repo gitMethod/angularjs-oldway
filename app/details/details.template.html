@@ -1,5 +1,9 @@
+
 <div class="row">
-        <div class="thumbnail col-sm-6 col-md-offset-3" ui-sref="header.categories.details">
+    <div ng-show="showFeedback" class="col-sm-3 col-sm-offset-4 alert alert-success" role="alert">
+        <strong>{{"Product added to cart"}}</strong>
+    </div>
+        <div class="thumbnail col-sm-3 col-sm-offset-4" ui-sref="header.categories.details">
             <img src="{{product.imageUrl}}" alt="...">
             <div class="caption">
                 <h3>{{product.name}}</h3>
@@ -9,6 +13,5 @@
             </div>
         </div>
 </div>
-<div ng-show="showFeedback" class=" col-sm-6 col-md-offset-3 alert alert-success" role="alert">
-    <strong>{{"Product added to cart"}}</strong>
-</div>
+
+
