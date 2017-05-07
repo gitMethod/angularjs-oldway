@@ -1,7 +1,7 @@
 
 <div class="row">
     <div ng-repeat="product in shownProducts | filter:service.getSearchWord()"
-         ng-class="{ 'image': product.unitsInStock <= 0 }" class="col-sm-4 col-md-4">
+         ng-class="{ 'image': product.unitsInStock <= 0 }" class="col-md-4">
         <div class="thumbnail" ng-click="sendProduct(product); sendToState()">
             <a href="">
                 <img  src="{{product.imageUrl}}" alt="product picture">

@@ -1,60 +1,46 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-<div class="col-sm-4 col-sm-offset-4">
-
-    <h1>Your shopping cart</h1><br>
-    <table ng-repeat="product in shoppingCart track by $index" id="cart" class="table table-hover table-condensed">
-        <thead>
-        <tr>
-            <th style="width:50%">Product</th>
-            <th style="width:10%">Price</th>
-            <th style="width:8%">Quantity</th>
-            <th style="width:22%" class="text-center">Subtotal</th>
-            <th style="width:10%"></th>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr>
-            <td data-th="Product">
-                <div class="row">
-                    <div class="col-sm-2 hidden-xs"><img src={{product.imageUrl}} class="img-responsive"/></div>
-                    <div class="col-sm-10">
-                        <h5 class="nomargin"><strong>{{product.name}}</strong> </h5>
-                    </div>
+<div class="container">
+    <div class="col-sm-8 col-sm-offset-2">
+        <h1>Your shopping cart</h1><br><br>
+        <div class= "row">
+            <div class="col-sm-5"><strong>Product</strong></div>
+            <div class="col-sm-2 text-center"><strong>Price</strong></div>
+            <div class="col-sm-2 text-center"><strong>Quantity</strong></div>
+            <div class="col-sm-2 text-center"><strong>Subtotal</strong></div>
+            <div class="col-sm-1" ></div>
+        </div><br>
+        <div ng-repeat="product in shoppingCart track by $index" id="cart" class="table table-hover table-condensed">
+            <div class="row"><hr>
+                <div class="col-sm-1 hidden-xs"><img src={{product.imageUrl}} class="img-responsive"/></div>
+                <div class="col-sm-4">
+                    <h5><strong>{{product.name}}</strong> </h5>
                 </div>
-            </td>
-            <td data-th="Price">{{ product.price | currency }}</td>
-            <td  data-th="Quantity">
-                <input type="number" data-ng-model="product.quantity" class="form-control text-center"
-                        ng-click="setNewQuantity(product)" min="1" max="{{product.unitsInStock}}">
-            </td>
-            <td data-ng-model="subtotal" class="text-center">{{product.price * product.quantity}}</td>
-            <td class="actions" data-th="">
-                <button ng-click="removeItem($index)" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
-            </td>
-        </tr>
-        </tbody>
-        <tfoot>
-            <td colspan="3" class="hidden-xs"></td>
-        </tfoot>
-    </table><br>
+                <div class="col-sm-2 text-center" >{{ product.price | currency }}</div>
+                <div class="col-sm-2 text-center">
+                    <input type="number" data-ng-model="product.quantity" class="form-control text-center"
+                           ng-click="setNewQuantity(product)" min="1" max="{{product.unitsInStock}}">
+                </div>
+                <div class="col-sm-2 text-center" >{{product.price * product.quantity | currency}}</div>
+                <div class="col-sm-1" >
+                    <button ng-click="removeItem($index)" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                </div>
+            </div>
+        </div><hr>
 
+        <div class= "row">
+            <div class="col-sm-3" >
+                <a ng-click="orderButton()" class="btn btn-primary">Checkout</i></a>
+            </div>
+            <div class="col-sm-6" ></div>
+            <div  class="col-sm-2">
+                <strong data-ng-model="total">&nbsp;&nbsp;&nbsp;&nbsp;Total:&nbsp;&nbsp;&nbsp;{{total | currency}}</strong>
+            </div>
+        </div><br>
 
-    <div class= "row">
-        <div class="col-md-3" >
-            <a ng-click="orderButton()" class="btn btn-primary">Checkout</i></a>
+        <div ng-show="showFeedback" class="alert ng-class:classColor;" role="alert">
+            <strong>{{feedback}}</strong>
         </div>
-        <div class="col-md-6" ></div>
-        <div  class="col-md-2">
-            <strong data-ng-model="total">&nbsp;&nbsp;&nbsp;&nbsp;Total:&nbsp;&nbsp;&nbsp;{{total}}</strong>
-        </div>
-    </div><br>
-
-    <div ng-show="showFeedback" class="alert ng-class:classColor;" role="alert">
-        <strong>{{feedback}}</strong>
     </div>
-
 </div>
 
 

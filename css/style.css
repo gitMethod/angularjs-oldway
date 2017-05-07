@@ -6,10 +6,6 @@
     display:         flex;
     flex-wrap: wrap;
 }
-.row > [class*='col-'] {
-    display: flex;
-    flex-direction: column;
-}
 
 .categories label {
     margin-left: 25px;
@@ -54,9 +50,7 @@ input.ng-invalid.ng-touched, textarea.ng-invalid{
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
-.image:hover:after {
 
-}
 
 
 
