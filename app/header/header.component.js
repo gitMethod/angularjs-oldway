@@ -27,7 +27,6 @@ angular.module("header").component("headerComponent", {
                     $scope.userStatus = "logged out";
                 }
             });
-
         }
     ]
 });

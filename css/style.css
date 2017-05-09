@@ -1,18 +1,21 @@
-
+.search-product {
+    padding-right: 10px;
+    padding-left: 10px;
+}
 .row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
 .categories label {
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 .categories div {
-   margin-bottom: 20px
+   margin-bottom: 20px;
 }
 
 span:hover, label:active {
@@ -23,13 +26,8 @@ span:active{
     background:black;
 }
 
-
 input.ng-invalid.ng-touched, textarea.ng-invalid{
     border: 2px solid red;
-}
-
-.log-user {
-    margin-right: 50px
 }
 
 .image img {
@@ -50,6 +48,43 @@ input.ng-invalid.ng-touched, textarea.ng-invalid{
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
+
+.navbar-right {
+    padding-right: 20px;
+}
+
+.buy-btn {
+    margin: 30px 0 30px 0;
+}
+
+.buy-alert {
+    margin-top: 20px;
+}
+
+.quantity-input{
+    max-width: 50px;
+    min-width: 50px;
+}
+
+@media (max-width: 992px) {
+    .thumbnail h3 {
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .thumbnail h3, p {
+        font-size: 12px;
+    }
+    .categories label {
+        font-size: 12px;
+    }
+}
+
 
 
 

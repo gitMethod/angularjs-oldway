@@ -1,16 +1,16 @@
 
 <div class="row">
     <div ng-repeat="product in shownProducts | filter:service.getSearchWord()"
-         ng-class="{ 'image': product.unitsInStock <= 0 }" class="col-md-4">
+         ng-class="{ 'image': product.unitsInStock <= 0 }" class="col-md-4 col-sm-6 col-xs-6 repeat-product">
         <div class="thumbnail" ng-click="sendProduct(product); sendToState()">
             <a href="">
-                <img  src="{{product.imageUrl}}" alt="product picture">
+                <img src="{{product.imageUrl}}" alt="product picture">
             </a>
             <div class="caption">
                 <h3>{{product.name}}</h3>
                 <p>{{product.price | currency}}</p>
-                <p><a href="" class="btn btn-primary" role="button"
-                      ng-click="sendProduct(product); sendToState()" >click for more</a> </p>
+                <p><a href="" class="btn btn-primary btn-responsive" role="button"
+                      ng-click="sendProduct(product); sendToState()" >more info</a> </p>
             </div>
         </div>
     </div>

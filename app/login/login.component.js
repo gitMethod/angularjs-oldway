@@ -15,6 +15,7 @@ angular.module("login").component("loginComponent", {
                         $rootScope.userInfo = res.data;
                         console.log("custom success msg" + res);
                         $rootScope.loggedIn = true;
+                        $state.go("header.categories.products");
                         $scope.feedback = "successfully logged in";
                         $scope.classColor = "alert-success";
                         $timeout(function(){
@@ -35,7 +36,7 @@ angular.module("login").component("loginComponent", {
                 $scope.email = '';
                 $scope.password = '';
                 $scope.signForm.$setPristine();
-                $scope.signForm.$setUntouched()
+                $scope.signForm.$setUntouched();
             };
         }
     ]
