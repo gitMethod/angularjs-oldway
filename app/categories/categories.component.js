@@ -18,9 +18,6 @@ angular.module("categories").component("categoriesComponent", {
                 productCategoriesService.setSearchState(this.checkboxCat);
                 productCategoriesService.setSearchCatId(this.category.id);
             };
-
-
-
         }
     ]
 });
